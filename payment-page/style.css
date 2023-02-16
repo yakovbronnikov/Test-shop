@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: linear-gradient(180deg, #FFF 0%, #F4F4F4 100%);
+  --font-color: #000;
+  --block-color: #fff;
+  --button-color: linear-gradient(90deg, #DBFF00 0%, #ADFF00 100%);
+  --button-text: #000;
+  --button-shadow: inset 0px 4px 8px rgba(255, 255, 255, 0.6), 0px 4px 24px rgba(158, 255, 0, 0.3);
+  --layers-color: #F6F6F6;
+  --input-border: #E1E1E1;
+  --secondary-text: #808080;
+  --font-family: 'Inter', sans-serif;
+  --border-radius: 10px;
+  --button-hover: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+  --avatar: url('https://click2delivery.ru/wp-content/uploads/2020/10/ozon-e1617787529116.png');
+  --logotype: #CECECE;
+}
+
+* {
+  font-family: var(--font-family);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--font-color);
+  transition: .2s;
+}
+
+h5 {font-weight: 600; font-size: 16px;}
+h3 {font-weight: 600; font-size: 24px;}
+
+.themes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 12px;
+  gap: 24px;
+  background: #000;
+}
+
+.theme-button {
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  color: #808080;
+  transition: .2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.theme-button:hover {
+  cursor: pointer;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  padding: 24px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  background: var(--bg-color);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.block {
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  background: var(--block-color);
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  gap: 20px
+}
+
+.order_info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  grid-row-gap: 8px;
+  align-items: center;
+}
+
+.order_info p {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.avatar {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  width: 40px;
+  height: 40px;
+  background: var(--avatar);
+  background-size: cover;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.form {
+  gap: 40px;
+  padding: 40px 24px 24px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.input {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  background: var(--layers-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--block-color);
+  padding: 24px 24px 12px 24px;
+  transition: .2s;
+}
+
+input::placeholder {
+  color: var(--layers-color);
+  transition: .4s;
+  opacity: 0;
+}
+
+input:focus::placeholder {
+  color: var(--secondary-text);
+  opacity: 0.3;
+}
+
+
+input:focus {
+  background: none;
+  border: 1px solid var(--input-border);
+  outline: 3px solid #0075FF40;
+}
+
+label {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  color: var(--secondary-text);
+  transition: .2s;
+  pointer-events: none;
+}
+
+input:focus ~ label, input:valid ~ label {
+  font-size: 12px;
+  top: 8px;
+}
+
+.input-group {
+  display: flex;
+  gap: 16px
+}
+
+.button-disable {
+  border-radius: var(--border-radius);
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(91.45deg, #F4F4F4 -0.02%, #EAEAEA 99.98%);
+  width: 100%;
+}
+
+
+.button {
+  border-radius: var(--border-radius);
+  padding: 16px 32px;
+  border: none;
+  background: var(--button-color);
+  color: var(--button-text);
+  cursor: pointer;
+}
+
+
+.button:hover {
+  background: var(--button-hover), var(--button-color);
+}
+
+
+
+.logotypes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logotypes path {
+  fill: var(--logotype);
+}
+
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.info span {
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.info svg path {
+  fill: var(--secondary-text);
+}
+
+
+@media (max-width: 600px), (max-height: 800px){
+  .box {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 48px;
+    justify-content: start;
+  }
+}
